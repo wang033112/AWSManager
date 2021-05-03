@@ -15,13 +15,15 @@
     <!-- Font Awesome -->
     <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- <link href="../vendors/nprogress/nprogress.css" rel="stylesheet"> -->
     <!-- Dropzone.js -->
     <link href="../vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <!-- <link href="../build/css/custom.min.css" rel="stylesheet"> -->
     <link href="../vendors/build/custom.min.css" rel="stylesheet">
+
+    <link href="../production/css/upload/upload-1.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -65,7 +67,7 @@
                       <li><a href="form_advanced.html">Advanced Components</a></li>
                       <li><a href="form_validation.html">Form Validation</a></li>
                       <li><a href="form_wizards.html">Form Wizard</a></li>
-                      <li><a href="form_upload.html">Form Upload</a></li>
+                      <li><a href="form_upload.html">图片上传</a></li>
                       <li><a href="form_buttons.html">Form Buttons</a></li>
                     </ul>
                   </li>
@@ -195,10 +197,10 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Form Upload </h3>
+                <h3>图片上传</h3>
               </div>
 
-              <div class="title_right">
+              <!-- <div class="title_right">
                 <div class="col-md-5 col-sm-5   form-group pull-right top_search">
                   <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search for...">
@@ -207,7 +209,7 @@
                     </span>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
 
             <div class="clearfix"></div>
@@ -216,8 +218,8 @@
               <div class="col-md-12 col-sm-12  ">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Dropzone multiple file uploader</h2>
-                    <ul class="nav navbar-right panel_toolbox">
+                    <h2>首页图片</h2>
+                    <!-- <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
                       <li class="dropdown">
@@ -229,16 +231,34 @@
                       </li>
                       <li><a class="close-link"><i class="fa fa-close"></i></a>
                       </li>
-                    </ul>
+                    </ul> -->
                     <div class="clearfix"></div>
                   </div>
-                  <div class="x_content">
-                    <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>
+                  <!-- <div class="x_content">
+                    <p>拖拽图片上传更新到服务器</p>
                     <form action="form_upload.html" class="dropzone"></form>
                     <br />
                     <br />
                     <br />
                     <br />
+                  </div> -->
+                  <div id="viewer" class="hori_linear">
+                    <!-- <div class="hori_linear_box">
+                      <p>拖拽图片上传更新到服务器</p>
+                      <div class="warp">
+                        <div class="warp-content">
+                          <img id="preview_1" />
+                        </div>
+                        
+                        <input type="file" id="file" onchange="onUploadFileChanged(this, 'preview_1')">
+                        <div class="button-line">
+                          <button class="btn btn-default" type="button">删除</button>
+                          <button type="submit" class="btn btn-success">上传</button>
+                        </div>
+                      </div>
+                    </div>
+                   -->
+
                   </div>
                 </div>
               </div>
@@ -269,6 +289,9 @@
     <!-- Custom Theme Scripts -->
     <!-- <script src="../build/js/custom.min.js"></script> -->
 
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.235.1.min.js"></script>
     <script src="../vendors/build/custom.min.js"></script>
+    <script src="../production/js/upload.js"></script>
+    <script>viewAlbum('HomePage');</script>
   </body>
 </html>
